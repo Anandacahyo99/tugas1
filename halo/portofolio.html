@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Saya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    /* CSS yang telah dirapikan sebelumnya masuk di sini */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #f0f0f0;
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: #ffd700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ffa500;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-container {
+      max-width: 350px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      color: #ffd700;
+    }
+
+    nav a {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-left: 1rem;
+    }
+    nav a:first-child {
+      margin-left: 0;
+    }
+
+    main {
+      flex: 1;
+      max-width: 350px;
+      margin: 1rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
+      padding: 1.25rem 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      color: #ffd700;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 1.2px;
+      text-align: center;
+    }
+
+    #about {
+      text-align: center;
+    }
+
+    #about img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #ffd700;
+      object-fit: cover;
+      box-shadow: 0 0 15px #ffd700;
+      margin-bottom: 0.8rem;
+    }
+
+    #about p {
+      font-weight: 300;
+      font-size: 1rem;
+      color: #eee;
+    }
+
+    #skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 0.7rem;
+    }
+
+    .skill {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      flex-basis: 48%;
+      text-align: center;
+      border: 1px solid #ffd700;
+      transition: background 0.3s ease;
+    }
+
+    .skill:hover {
+      background: #ffd700;
+      color: #222;
+      cursor: default;
+    }
+
+    #projects .project-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    #projects .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 7px 18px #ffd700cc;
+    }
+
+    .project-title {
+      font-weight: 600;
+      color: #ffd700;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+
+    #contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #contact label {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    #contact input,
+    #contact textarea {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+    }
+
+    #contact button {
+      background-color: #ffd700;
+      color: #222;
+      border: none;
+      padding: 0.7rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #contact button:hover {
+      background-color: #ffa500;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">Portofolio</div>
+      <nav>
+        <a href="#about">Tentang</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#projects">Proyek</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <img src="https://via.placeholder.com/120" alt="Foto Profil">
+      <p>Halo! Saya adalah seorang pengembang web yang antusias belajar dan membangun aplikasi web modern.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Keahlian</h2>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+    </section>
+
+    <section id="projects">
+      <h2>Proyek</h2>
+      <div class="project-card">
+        <div class="project-title">Website Portofolio</div>
+        <div class="project-desc">Sebuah website personal menggunakan HTML, CSS, dan JavaScript.</div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Aplikasi Todo</div>
+        <div class="project-desc">Aplikasi untuk mencatat tugas harian berbasis React.</div>
+      </div>
+    </section>
+
+   
+  </main>
+</body>
+</html>
